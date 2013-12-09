@@ -1,19 +1,31 @@
-var DATABASE = "mongodb://localhost:27017/app_52a357298eb3ce0b18000001";
+var dbUrl = "mongodb://localhost:27017/app_52a357298eb3ce0b18000001";
+var DATABASE;
 
 // Mongo
 var mongodb = require('mongodb')
 var MongoClient = mongodb.MongoClient;
+MongoClient.connect(dbUrl, function (err, db) {
+    DATABASE = db;
+});
 
-module.exports = {
+module.exports = objToReturn = {
     // find
     read: function (options, callback) {
 
+        debugger;
         // process options
         processOptions(options, [
             { key: "q",     defaultVal: {} },
             { key: "o",     defaultVal: {} },
             { key: "db",    defaultVal: "" }
         ]);
+
+        if (!DATABASE) {
+            setTimeout(function () {
+                objToReturn.read(options, callback);
+            }, 500);
+            return;
+        }
 
         // get collection
         var collection = DATABASE.collection(options.collection)
@@ -28,6 +40,13 @@ module.exports = {
         processOptions(options, [
             { key: "d",     defaultVal: {} }
         ]);
+
+        if (!DATABASE) {
+            setTimeout(function () {
+                objToReturn.create(options, callback);
+            }, 500);
+            return;
+        }
 
         // get collection
         var collection = DATABASE.collection(options.collection)
@@ -45,6 +64,13 @@ module.exports = {
             { key: "d",     defaultVal: {} }
         ]);
 
+        if (!DATABASE) {
+            setTimeout(function () {
+                objToReturn.update(options, callback);
+            }, 500);
+            return;
+        }
+
         // get collection
         var collection = database.collection(options.collection)
 
@@ -58,6 +84,13 @@ module.exports = {
         processOptions(options, [
             { key: "q",     defaultVal: {} }
         ]);
+
+        if (!DATABASE) {
+            setTimeout(function () {
+                objToReturn.delete(options, callback);
+            }, 500);
+            return;
+        }
 
         // get collection
         var collection = database.collection(options.collection)

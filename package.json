@@ -1,0 +1,19 @@
+{
+  "name": "mono-crud",
+  "version": "0.0.0",
+  "description": "NodeJS CRUD module for Mono",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/IonicaBizau/mono-crud.git"
+  },
+  "keywords": [
+    "mono",
+    "crud"
+  ],
+  "author": "jillix gmbh",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/mono-crud/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/mono-crud"
+}

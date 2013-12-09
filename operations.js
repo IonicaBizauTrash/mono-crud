@@ -58,7 +58,7 @@ function createCrudRequest (crudObj) {
     crudRequest = {
         role:       crudObj.role,
         options:    crudObj.options || {},
-        templateId: crudObj.t;
+        templateId: crudObj.t,
         method:     crudObj.method,
         session:    crudObj.session,
         noJoins:    crudObj.noJoins,

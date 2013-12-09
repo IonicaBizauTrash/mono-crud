@@ -7,6 +7,7 @@ var METHODS = [
     'delete'
 ];
 
+
 for (var i in METHODS) {
     (function(method) {
         // operations
@@ -15,26 +16,28 @@ for (var i in METHODS) {
         };
 
         // listeners
-        var serverEvent = 'crud.' + method;
-        M.on(serverEvent, function (request, callback) {
-            
-            request.method = method;
-            request.options = request.options || {};
+        if (M && typeof M.on === "function") {
+            var serverEvent = 'crud.' + method;
+            M.on(serverEvent, function (request, callback) {
+                
+                request.method = method;
+                request.options = request.options || {};
 
-            if (!callback) {
-                callback = function(err) {
-                    if (err) {
-                        console.error('Error executing server operation: ' + serverEvent);
-                        console.error('******************')
-                        console.error(err);
-                        console.error('------------------')
-                        console.error(request);
-                        console.error('******************')
-                    }
-                };
-            }
-            model(request, callback);
-        });
+                if (!callback) {
+                    callback = function(err) {
+                        if (err) {
+                            console.error('Error executing server operation: ' + serverEvent);
+                            console.error('******************')
+                            console.error(err);
+                            console.error('------------------')
+                            console.error(request);
+                            console.error('******************')
+                        }
+                    };
+                }
+                model(request, callback);
+            });
+        }
     })(METHODS[i]);
 }
 

@@ -16,8 +16,8 @@ var METHODS = [
 for (var i in METHODS) {
     (function(method) {
         // operations
-        exports[method] = function (link) {
-            model(createRequest(method, link), createResponseHandler(method, link));
+        exports[method] = function (crudObject, callback) {
+            model(createCrudObject(crudObject), callback);
         };
 
         // listeners
@@ -44,49 +44,48 @@ for (var i in METHODS) {
     })(METHODS[i]);
 }
 
-// private functions
-function createRequest (method, link) {
 
-    var data = link.data || {};
+// private functions
+function createCrudObject (crudObj) {
+
+    var crudRequest = {};
 
     // template id is mandatory
-    if (!data.t) {
+    if (!crudObj.t) {
         return null;
     }
 
-    var request = {
-        role: link.session.crudRole,
-        options: {},
-        templateId: data.t,
-        method: method,
-        session: link.session,
-        // TODO remove this when updates on linked fields are possible
-        noJoins: data.noJoins
+    crudRequest = {
+        role:       crudObj.role,
+        options:    crudObj.options || {},
+        templateId: crudObj.t;
+        method:     crudObj.method,
+        session:    crudObj.session,
+        noJoins:    crudObj.noJoins,
+        query:      crudObj.q || {},
     };
 
-    // query
-    request.query = data.q || {};
-    request.query._tp = data.t;
+    crudRequest.query._tp = crudObj.t;
 
     // update
-    if (data.d && data.d.constructor.name === 'Object') {
+    if (crudObj.d && crudObj.d.constructor.name === 'Object') {
 
         // set type
-        if (method === 'create') {
-            data.d._tp = data.t;
+        if (crudObj.method === 'create') {
+            crudObj.d._tp = crudObj.t;
         }
 
-        request.data = data.d;
+        crudRequest.data = crudObj.d;
     }
 
     // options
-    if (data.o && data.o.constructor.name === 'Object') {
-        request.options = data.o;
+    if (crudObj.o && crudObj.o.constructor.name === 'Object') {
+        crudRequest.options = data.o;
     } else {
-        request.options = {};
+        crudRequest.options = {};
     }
 
-    return request;
+    return crudRequest;
 }
 
 function createResponseHandler (method, link) {

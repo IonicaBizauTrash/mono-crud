@@ -2,7 +2,7 @@
   "name": "mono-crud",
   "version": "0.0.0",
   "description": "NodeJS CRUD module for Mono",
-  "main": "index.js",
+  "main": "operations.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/IonicaBizau/mono-crud.git"

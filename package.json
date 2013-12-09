@@ -12,11 +12,17 @@
     "crud"
   ],
   "dependencies": {
-    "modm": "*"
+      "mongodb": "*"
   },
-  "author": "jillix gmbh",
+  "author": {
+    "name": "jillix gmbh"
+  },
   "bugs": {
     "url": "https://github.com/IonicaBizau/mono-crud/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/mono-crud"
+  "homepage": "https://github.com/IonicaBizau/mono-crud",
+  "readme": "mono-crud\n=========\n\nNodeJS CRUD module for Mono\n",
+  "readmeFilename": "README.md",
+  "_id": "mono-crud@0.0.0",
+  "_from": "mono-crud@*"
 }

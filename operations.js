@@ -17,7 +17,7 @@ for (var i in METHODS) {
     (function(method) {
         // operations
         exports[method] = function (crudObject, callback) {
-            model(createCrudObject(crudObject), callback);
+            model(createCrudRequest(crudObject), callback);
         };
 
         // listeners
@@ -46,7 +46,7 @@ for (var i in METHODS) {
 
 
 // private functions
-function createCrudObject (crudObj) {
+function createCrudRequest (crudObj) {
 
     var crudRequest = {};
 

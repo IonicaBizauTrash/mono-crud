@@ -17,7 +17,7 @@ for (var i in METHODS) {
     (function(method) {
         // operations
         exports[method] = function (crudObject, callback) {
-            model(createCrudRequest(crudObject), callback);
+            model(createCrudRequest(crudObject), createCallback(callback, crudObject));
         };
 
         // listeners
@@ -88,44 +88,7 @@ function createCrudRequest (crudObj) {
     return crudRequest;
 }
 
-function createResponseHandler (method, link) {
-    return function(err, results, readCount) {
-        if (err) {
-            return link.send(err.statusCode || 500, err.message || err);
-        }
-
-        link.res.headers['content-type'] = 'application/json; charset=utf-8';
-
-
-        // TODO How can this be fixed using a better way?
-        var constructorNameOfResults = results.constructor.name;
-        if (results && constructorNameOfResults === "Object" && typeof results.toArray === "function") {
-            constructorNameOfResults = "Cursor"
-        }
-
-         // if we have an array or a cursor, set X-Mono-CRUD-Count response header
-        if (["Cursor", "Array"].indexOf(constructorNameOfResults) !== -1) {
-            link.res.headers['X-Mono-CRUD-Count'] = (readCount || 0).toString();
-        }
- 
-        if (method === 'read' && constructorNameOfResults === 'Cursor') {
-
-            // stream result
-            var stream = results.stream();
-            link.stream.start(200);
-
-            stream.on('end', function() {
-                link.stream.end();
-            });
-            stream.on('error', function(err) {
-                link.stream.error(500, err.toString());
-            });
-            stream.on('data', function(data) {
-                link.stream.data(data);
-            });
-
-        } else {
-            link.send(200, results);
-        }
-    };
+function createCallback (callback) {
+    callback = callback || function () {};
+    return callback;
 }

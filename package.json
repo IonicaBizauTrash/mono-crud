@@ -11,6 +11,9 @@
     "mono",
     "crud"
   ],
+  "dependencies": {
+    "modm": "*"
+  },
   "author": "jillix gmbh",
   "bugs": {
     "url": "https://github.com/IonicaBizau/mono-crud/issues"

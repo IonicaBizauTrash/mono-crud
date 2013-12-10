@@ -103,7 +103,7 @@ function getCollectionFromTemplate (templateId, callback) {
 
         if (err) { return callback (err); }
         
-        var col = dbCache[templateId] = db.collection(templObject.collection;
+        var col = dbCache[templateId] = db.collection(templObject.collection);
 
         callback(null, col);
     });

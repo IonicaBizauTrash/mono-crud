@@ -7,7 +7,6 @@ module.exports = objToReturn = {
     // find
     read: function (options, callback) {
 
-        debugger;
         // process options
         processOptions(options, [
             { key: "q",     defaultVal: {} },

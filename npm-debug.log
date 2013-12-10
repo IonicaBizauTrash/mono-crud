@@ -1,0 +1,276 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'publish', '-f' ]
+2 info using npm@1.3.14
+3 info using node@v0.10.22
+4 verbose node symlink /usr/bin/node
+5 warn using --force I sure hope you know what you are doing.
+6 verbose publish [ '.' ]
+7 verbose cache add [ '.', null ]
+8 verbose cache add name=undefined spec="." args=[".",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: '.',
+9 verbose parsed url   path: '.',
+9 verbose parsed url   href: '.' }
+10 silly lockFile 3a52ce78- .
+11 verbose lock . /home/ionicabizau/.npm/3a52ce78-.lock
+12 verbose tar pack [ '/home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/tmp.tgz
+14 verbose folder .
+15 info prepublish mono-crud@0.0.3
+16 silly lockFile 1f1177db-tar tar://.
+17 verbose lock tar://. /home/ionicabizau/.npm/1f1177db-tar.lock
+18 silly lockFile d0870c1f-30760-0-8961514234542847-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/tmp.tgz
+19 verbose lock tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/tmp.tgz /home/ionicabizau/.npm/d0870c1f-30760-0-8961514234542847-tmp-tgz.lock
+20 silly lockFile 1f1177db-tar tar://.
+21 silly lockFile 1f1177db-tar tar://.
+22 silly lockFile d0870c1f-30760-0-8961514234542847-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/tmp.tgz
+23 silly lockFile d0870c1f-30760-0-8961514234542847-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/tmp.tgz
+24 verbose tar unpack /home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/tmp.tgz
+25 silly lockFile d289ad51-30760-0-8961514234542847-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/package
+26 verbose lock tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/package /home/ionicabizau/.npm/d289ad51-30760-0-8961514234542847-package.lock
+27 silly lockFile d0870c1f-30760-0-8961514234542847-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/tmp.tgz
+28 verbose lock tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/tmp.tgz /home/ionicabizau/.npm/d0870c1f-30760-0-8961514234542847-tmp-tgz.lock
+29 silly gunzTarPerm modes [ '755', '644' ]
+30 silly gunzTarPerm extractEntry package.json
+31 silly gunzTarPerm extractEntry .npmignore
+32 silly gunzTarPerm extractEntry README.md
+33 silly gunzTarPerm extractEntry model.js
+34 silly gunzTarPerm extractEntry operations.js
+35 silly gunzTarPerm extractEntry templates.json
+36 silly gunzTarPerm extractEntry test/1.js
+37 silly lockFile d289ad51-30760-0-8961514234542847-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/package
+38 silly lockFile d289ad51-30760-0-8961514234542847-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/package
+39 silly lockFile d0870c1f-30760-0-8961514234542847-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/tmp.tgz
+40 silly lockFile d0870c1f-30760-0-8961514234542847-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/tmp.tgz
+41 verbose tar pack [ '/home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz',
+41 verbose tar pack   '/home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/package' ]
+42 verbose tarball /home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+43 verbose folder /home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/package
+44 silly lockFile d289ad51-30760-0-8961514234542847-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/package
+45 verbose lock tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/package /home/ionicabizau/.npm/d289ad51-30760-0-8961514234542847-package.lock
+46 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+47 verbose lock tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz /home/ionicabizau/.npm/49ed2772--npm-mono-crud-0-0-3-package-tgz.lock
+48 silly lockFile d289ad51-30760-0-8961514234542847-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/package
+49 silly lockFile d289ad51-30760-0-8961514234542847-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692230760-0.8961514234542847/package
+50 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+51 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+52 silly lockFile 8b05242c-izau-npm-mono-crud-0-0-3-package /home/ionicabizau/.npm/mono-crud/0.0.3/package
+53 verbose lock /home/ionicabizau/.npm/mono-crud/0.0.3/package /home/ionicabizau/.npm/8b05242c-izau-npm-mono-crud-0-0-3-package.lock
+54 silly lockFile 8b05242c-izau-npm-mono-crud-0-0-3-package /home/ionicabizau/.npm/mono-crud/0.0.3/package
+55 silly lockFile 8b05242c-izau-npm-mono-crud-0-0-3-package /home/ionicabizau/.npm/mono-crud/0.0.3/package
+56 verbose tar unpack /home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+57 silly lockFile ebdfa365-izau-npm-mono-crud-0-0-3-package tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package
+58 verbose lock tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package /home/ionicabizau/.npm/ebdfa365-izau-npm-mono-crud-0-0-3-package.lock
+59 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+60 verbose lock tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz /home/ionicabizau/.npm/49ed2772--npm-mono-crud-0-0-3-package-tgz.lock
+61 silly gunzTarPerm modes [ '755', '644' ]
+62 silly gunzTarPerm extractEntry package.json
+63 silly gunzTarPerm extractEntry .npmignore
+64 silly gunzTarPerm extractEntry README.md
+65 silly gunzTarPerm extractEntry model.js
+66 silly gunzTarPerm extractEntry operations.js
+67 silly gunzTarPerm extractEntry templates.json
+68 silly gunzTarPerm extractEntry test/1.js
+69 silly lockFile ebdfa365-izau-npm-mono-crud-0-0-3-package tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package
+70 silly lockFile ebdfa365-izau-npm-mono-crud-0-0-3-package tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package
+71 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+72 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+73 verbose chmod /home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz 644
+74 verbose chown /home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz [ 1001, 1001 ]
+75 silly lockFile 3a52ce78- .
+76 silly lockFile 3a52ce78- .
+77 silly publish { name: 'mono-crud',
+77 silly publish   version: '0.0.3',
+77 silly publish   description: 'NodeJS CRUD module for Mono',
+77 silly publish   main: 'operations.js',
+77 silly publish   repository:
+77 silly publish    { type: 'git',
+77 silly publish      url: 'git://github.com/IonicaBizau/mono-crud.git' },
+77 silly publish   keywords: [ 'mono', 'crud' ],
+77 silly publish   dependencies: { mongodb: '*' },
+77 silly publish   author: { name: 'jillix gmbh' },
+77 silly publish   bugs: { url: 'https://github.com/IonicaBizau/mono-crud/issues' },
+77 silly publish   homepage: 'https://github.com/IonicaBizau/mono-crud',
+77 silly publish   readme: 'mono-crud\n=========\n\nNodeJS CRUD module for Mono\n',
+77 silly publish   readmeFilename: 'README.md',
+77 silly publish   _id: 'mono-crud@0.0.3',
+77 silly publish   _from: '.',
+77 silly publish   dist: { shasum: 'b80d4aa8cc8effbee37d86e40dacf7b3454e7b6b' } }
+78 verbose url raw mono-crud
+79 verbose url resolving [ 'https://registry.npmjs.org/', './mono-crud' ]
+80 verbose url resolved https://registry.npmjs.org/mono-crud
+81 info trying registry request attempt 1 at 18:17:10
+82 http PUT https://registry.npmjs.org/mono-crud
+83 http 409 https://registry.npmjs.org/mono-crud
+84 verbose url raw mono-crud
+85 verbose url resolving [ 'https://registry.npmjs.org/', './mono-crud' ]
+86 verbose url resolved https://registry.npmjs.org/mono-crud
+87 info trying registry request attempt 1 at 18:17:12
+88 http GET https://registry.npmjs.org/mono-crud
+89 http 200 https://registry.npmjs.org/mono-crud
+90 warn publish Forced publish over mono-crud@0.0.3
+91 verbose registry.get mono-crud staleOk, background update
+92 verbose url raw mono-crud
+93 verbose url resolving [ 'https://registry.npmjs.org/', './mono-crud' ]
+94 verbose url resolved https://registry.npmjs.org/mono-crud
+95 info trying registry request attempt 1 at 18:17:13
+96 verbose etag "BWULNJA332U8QOQGARQLREBMP"
+97 http GET https://registry.npmjs.org/mono-crud
+98 info unpublish mono-crud@0.0.3 not published
+99 verbose publish [ '.' ]
+100 verbose cache add [ '.', null ]
+101 verbose cache add name=undefined spec="." args=[".",null]
+102 verbose parsed url { protocol: null,
+102 verbose parsed url   slashes: null,
+102 verbose parsed url   auth: null,
+102 verbose parsed url   host: null,
+102 verbose parsed url   port: null,
+102 verbose parsed url   hostname: null,
+102 verbose parsed url   hash: null,
+102 verbose parsed url   search: null,
+102 verbose parsed url   query: null,
+102 verbose parsed url   pathname: '.',
+102 verbose parsed url   path: '.',
+102 verbose parsed url   href: '.' }
+103 silly lockFile 3a52ce78- .
+104 verbose lock . /home/ionicabizau/.npm/3a52ce78-.lock
+105 verbose tar pack [ '/home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/tmp.tgz',
+105 verbose tar pack   '.' ]
+106 verbose tarball /home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/tmp.tgz
+107 verbose folder .
+108 info prepublish mono-crud@0.0.3
+109 silly lockFile 1f1177db-tar tar://.
+110 verbose lock tar://. /home/ionicabizau/.npm/1f1177db-tar.lock
+111 silly lockFile be06d48e-233751-0-168518858961761-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/tmp.tgz
+112 verbose lock tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/tmp.tgz /home/ionicabizau/.npm/be06d48e-233751-0-168518858961761-tmp-tgz.lock
+113 silly lockFile 1f1177db-tar tar://.
+114 silly lockFile 1f1177db-tar tar://.
+115 silly lockFile be06d48e-233751-0-168518858961761-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/tmp.tgz
+116 silly lockFile be06d48e-233751-0-168518858961761-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/tmp.tgz
+117 verbose tar unpack /home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/tmp.tgz
+118 silly lockFile f9b98ce8-233751-0-168518858961761-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/package
+119 verbose lock tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/package /home/ionicabizau/.npm/f9b98ce8-233751-0-168518858961761-package.lock
+120 silly lockFile be06d48e-233751-0-168518858961761-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/tmp.tgz
+121 verbose lock tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/tmp.tgz /home/ionicabizau/.npm/be06d48e-233751-0-168518858961761-tmp-tgz.lock
+122 silly gunzTarPerm modes [ '755', '644' ]
+123 silly gunzTarPerm extractEntry package.json
+124 silly gunzTarPerm extractEntry .npmignore
+125 silly gunzTarPerm extractEntry README.md
+126 silly gunzTarPerm extractEntry model.js
+127 silly gunzTarPerm extractEntry operations.js
+128 silly gunzTarPerm extractEntry templates.json
+129 silly gunzTarPerm extractEntry test/1.js
+130 silly lockFile f9b98ce8-233751-0-168518858961761-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/package
+131 silly lockFile f9b98ce8-233751-0-168518858961761-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/package
+132 silly lockFile be06d48e-233751-0-168518858961761-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/tmp.tgz
+133 silly lockFile be06d48e-233751-0-168518858961761-tmp-tgz tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/tmp.tgz
+134 verbose tar pack [ '/home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz',
+134 verbose tar pack   '/home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/package' ]
+135 verbose tarball /home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+136 verbose folder /home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/package
+137 silly lockFile f9b98ce8-233751-0-168518858961761-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/package
+138 verbose lock tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/package /home/ionicabizau/.npm/f9b98ce8-233751-0-168518858961761-package.lock
+139 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+140 verbose lock tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz /home/ionicabizau/.npm/49ed2772--npm-mono-crud-0-0-3-package-tgz.lock
+141 silly lockFile f9b98ce8-233751-0-168518858961761-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/package
+142 silly lockFile f9b98ce8-233751-0-168518858961761-package tar:///home/ionicabizau/tmp/npm-16097-jq2iHlPL/1386692233751-0.168518858961761/package
+143 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+144 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+145 silly lockFile 8b05242c-izau-npm-mono-crud-0-0-3-package /home/ionicabizau/.npm/mono-crud/0.0.3/package
+146 verbose lock /home/ionicabizau/.npm/mono-crud/0.0.3/package /home/ionicabizau/.npm/8b05242c-izau-npm-mono-crud-0-0-3-package.lock
+147 silly lockFile 8b05242c-izau-npm-mono-crud-0-0-3-package /home/ionicabizau/.npm/mono-crud/0.0.3/package
+148 silly lockFile 8b05242c-izau-npm-mono-crud-0-0-3-package /home/ionicabizau/.npm/mono-crud/0.0.3/package
+149 verbose tar unpack /home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+150 silly lockFile ebdfa365-izau-npm-mono-crud-0-0-3-package tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package
+151 verbose lock tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package /home/ionicabizau/.npm/ebdfa365-izau-npm-mono-crud-0-0-3-package.lock
+152 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+153 verbose lock tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz /home/ionicabizau/.npm/49ed2772--npm-mono-crud-0-0-3-package-tgz.lock
+154 silly gunzTarPerm modes [ '755', '644' ]
+155 silly gunzTarPerm extractEntry package.json
+156 silly gunzTarPerm extractEntry .npmignore
+157 silly gunzTarPerm extractEntry README.md
+158 silly gunzTarPerm extractEntry model.js
+159 silly gunzTarPerm extractEntry operations.js
+160 silly gunzTarPerm extractEntry templates.json
+161 silly gunzTarPerm extractEntry test/1.js
+162 silly lockFile ebdfa365-izau-npm-mono-crud-0-0-3-package tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package
+163 silly lockFile ebdfa365-izau-npm-mono-crud-0-0-3-package tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package
+164 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+165 silly lockFile 49ed2772--npm-mono-crud-0-0-3-package-tgz tar:///home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz
+166 verbose chmod /home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz 644
+167 verbose chown /home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz [ 1001, 1001 ]
+168 silly lockFile 3a52ce78- .
+169 silly lockFile 3a52ce78- .
+170 silly publish { name: 'mono-crud',
+170 silly publish   version: '0.0.3',
+170 silly publish   description: 'NodeJS CRUD module for Mono',
+170 silly publish   main: 'operations.js',
+170 silly publish   repository:
+170 silly publish    { type: 'git',
+170 silly publish      url: 'git://github.com/IonicaBizau/mono-crud.git' },
+170 silly publish   keywords: [ 'mono', 'crud' ],
+170 silly publish   dependencies: { mongodb: '*' },
+170 silly publish   author: { name: 'jillix gmbh' },
+170 silly publish   bugs: { url: 'https://github.com/IonicaBizau/mono-crud/issues' },
+170 silly publish   homepage: 'https://github.com/IonicaBizau/mono-crud',
+170 silly publish   readme: 'mono-crud\n=========\n\nNodeJS CRUD module for Mono\n',
+170 silly publish   readmeFilename: 'README.md',
+170 silly publish   _id: 'mono-crud@0.0.3',
+170 silly publish   _from: '.',
+170 silly publish   dist:
+170 silly publish    { shasum: 'b80d4aa8cc8effbee37d86e40dacf7b3454e7b6b',
+170 silly publish      tarball: 'http://registry.npmjs.org/mono-crud/-/mono-crud-0.0.3.tgz' },
+170 silly publish   _npmVersion: '1.3.14',
+170 silly publish   _npmUser: { name: 'ionicabizau', email: 'bizauionica@yahoo.com' } }
+171 verbose url raw mono-crud
+172 verbose url resolving [ 'https://registry.npmjs.org/', './mono-crud' ]
+173 verbose url resolved https://registry.npmjs.org/mono-crud
+174 info trying registry request attempt 1 at 18:17:13
+175 http PUT https://registry.npmjs.org/mono-crud
+176 http 304 https://registry.npmjs.org/mono-crud
+177 silly registry.get cb [ 304,
+177 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+177 silly registry.get     etag: '"BWULNJA332U8QOQGARQLREBMP"',
+177 silly registry.get     date: 'Tue, 10 Dec 2013 16:17:14 GMT',
+177 silly registry.get     'content-length': '0' } ]
+178 verbose etag mono-crud from cache
+179 http 409 https://registry.npmjs.org/mono-crud
+180 verbose url raw mono-crud
+181 verbose url resolving [ 'https://registry.npmjs.org/', './mono-crud' ]
+182 verbose url resolved https://registry.npmjs.org/mono-crud
+183 info trying registry request attempt 1 at 18:17:15
+184 http GET https://registry.npmjs.org/mono-crud
+185 http 200 https://registry.npmjs.org/mono-crud
+186 verbose uploading [ 'mono-crud/-/mono-crud-0.0.3.tgz/-rev/8-b3d258083f7f0d70f13adf7a39a3619b',
+186 verbose uploading   '/home/ionicabizau/.npm/mono-crud/0.0.3/package.tgz' ]
+187 verbose url raw mono-crud/-/mono-crud-0.0.3.tgz/-rev/8-b3d258083f7f0d70f13adf7a39a3619b
+188 verbose url resolving [ 'https://registry.npmjs.org/',
+188 verbose url resolving   './mono-crud/-/mono-crud-0.0.3.tgz/-rev/8-b3d258083f7f0d70f13adf7a39a3619b' ]
+189 verbose url resolved https://registry.npmjs.org/mono-crud/-/mono-crud-0.0.3.tgz/-rev/8-b3d258083f7f0d70f13adf7a39a3619b
+190 info trying registry request attempt 1 at 18:17:16
+191 http PUT https://registry.npmjs.org/mono-crud/-/mono-crud-0.0.3.tgz/-rev/8-b3d258083f7f0d70f13adf7a39a3619b
+192 http 409 https://registry.npmjs.org/mono-crud/-/mono-crud-0.0.3.tgz/-rev/8-b3d258083f7f0d70f13adf7a39a3619b
+193 error publish fail Cannot publish over existing version.
+193 error publish fail Update the 'version' field in package.json and try again.
+193 error publish fail
+193 error publish fail If the previous version was published in error, see:
+193 error publish fail     npm help unpublish
+193 error publish fail
+193 error publish fail To automatically increment version numbers, see:
+193 error publish fail     npm help version
+194 error System Linux 3.11.0-14-generic
+195 error command "/usr/bin/node" "/usr/bin/npm" "publish" "-f"
+196 error cwd /home/ionicabizau/Documents/mono-crud
+197 error node -v v0.10.22
+198 error npm -v 1.3.14
+199 error code EPUBLISHCONFLICT
+200 verbose exit [ 1, true ]

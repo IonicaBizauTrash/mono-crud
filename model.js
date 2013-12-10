@@ -1,12 +1,6 @@
-var dbUrl = "mongodb://localhost:27017/app_52a357298eb3ce0b18000001";
-var DATABASE;
-
 // Mongo
 var mongodb = require('mongodb')
 var MongoClient = mongodb.MongoClient;
-MongoClient.connect(dbUrl, function (err, db) {
-    DATABASE = db;
-});
 
 module.exports = objToReturn = {
     // find
@@ -17,42 +11,33 @@ module.exports = objToReturn = {
         processOptions(options, [
             { key: "q",     defaultVal: {} },
             { key: "o",     defaultVal: {} },
-            { key: "db",    defaultVal: "" }
+            { key: "t",     defaultVal: "" }
         ]);
 
-        if (!DATABASE) {
-            setTimeout(function () {
-                objToReturn.read(options, callback);
-            }, 500);
-            return;
-        }
-
-        // get collection
-        var collection = DATABASE.collection(options.collection)
-
-        // and finally, find
-        collection.find(options.q, options.o).toArray(callback);
+        getCollectionFromTemplate (options.t, function (err, collection) {
+        
+            if (err) { return callback (err); }
+            
+            // and finally, find
+            collection.find(options.q, options.o).toArray(callback);
+        });
     },
     // create
     create: function (options, callback) {
 
         // process options
         processOptions(options, [
-            { key: "d",     defaultVal: {} }
+            { key: "d",     defaultVal: {} },
+            { key: "t",     defaultVal: "" }
         ]);
 
-        if (!DATABASE) {
-            setTimeout(function () {
-                objToReturn.create(options, callback);
-            }, 500);
-            return;
-        }
-
-        // get collection
-        var collection = DATABASE.collection(options.collection)
-
-        // and finally, insert something there
-        collection.insert(options.d, callback);
+        getCollectionFromTemplate (options.t, function (err, collection) {
+        
+            if (err) { return callback (err); }
+        
+            // and finally, insert something there
+            collection.insert(options.d, callback);
+        });
     },
     // update
     update: function (options, callback) {
@@ -61,42 +46,34 @@ module.exports = objToReturn = {
         processOptions(options, [
             { key: "q",     defaultVal: {} },
             { key: "o",     defaultVal: {} },
-            { key: "d",     defaultVal: {} }
+            { key: "d",     defaultVal: {} },
+            { key: "t",     defaultVal: "" }
         ]);
 
-        if (!DATABASE) {
-            setTimeout(function () {
-                objToReturn.update(options, callback);
-            }, 500);
-            return;
-        }
-
-        // get collection
-        var collection = database.collection(options.collection)
-
-        // and finally, update something there
-        collection.update(options.q, options.d, options.o, callback);
+        getCollectionFromTemplate (options.t, function (err, collection) {
+        
+            if (err) { return callback (err); }
+        
+            // and finally, update something there
+            collection.update(options.q, options.d, options.o, callback);
+        });
     },
     // remove
     delete: function (options, callback) {
 
         // process options
         processOptions(options, [
-            { key: "q",     defaultVal: {} }
+            { key: "q",     defaultVal: {} },
+            { key: "t",     defaultVal: "" }
         ]);
 
-        if (!DATABASE) {
-            setTimeout(function () {
-                objToReturn.delete(options, callback);
-            }, 500);
-            return;
-        }
-
-        // get collection
-        var collection = database.collection(options.collection)
-
-        // and finally, remove something
-        collection.remove(options.q, callback);
+        getCollectionFromTemplate (options.t, function (err, collection) {
+        
+            if (err) { return callback (err); }
+        
+            // and finally, remove something
+            collection.remove(options.q, callback);
+        });
     }
 };
 
@@ -113,3 +90,21 @@ function processOptions (options, fields) {
     }
 }
 
+var dbCache = {};
+function getCollectionFromTemplate (templateId, callback) {
+    
+    if (dbCache[templateId]) {
+        return callback(null, dbCache[templateId]);
+    }
+
+    var templObject = Templates[templateId];
+
+    MongoClient.connect("mongodb://localhost:27017/" + templObject.db, function (err, db) {
+
+        if (err) { return callback (err); }
+        
+        var col = dbCache[templateId] = db.collection(templObject.collection;
+
+        callback(null, col);
+    });
+}

@@ -1,7 +1,7 @@
 var Crud = require("../operations");
 
 Crud.read({
-    collection: "m_modules"
+    query: {}
 }, function (err, data) {
     console.log(err, data);
     process.exit();

@@ -1,0 +1,176 @@
+{
+  "applications": {
+    "_id": "528f78dc197ef1c23714a04d",
+    "_tp": [],
+    "db": "mono",
+    "collection": "m_applications",
+    "name": "m_applications",
+    "options": {
+      "label": "Applications"
+    },
+    "roles": {},
+    "itemAccess": true,
+    "schema": {
+      "name": {
+        "type": "string",
+        "required": true
+      },
+      "domains": [
+        {
+          "type": "string",
+          "required": true
+        }
+      ],
+      "routes": {
+        "type": "object",
+        "required": true
+      },
+      "locale": {
+        "type": "string",
+        "required": true
+      },
+      "roles": {
+        "type": "object",
+        "required": true
+      },
+      "server": {
+        "host": {
+          "type": "string",
+          "required": true
+        },
+        "http": {
+          "type": "number",
+          "required": true
+        },
+        "ws": {
+          "type": "number",
+          "required": true
+        }
+      },
+      "public": {
+        "role": {
+          "type": "objectid",
+          "required": true
+        },
+        "dir": {
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  },
+  "modules": {
+    "_id": "528f78f1197ef1c23714a04e",
+    "_tp": [],
+    "db": "mono",
+    "collection": "m_modules",
+    "name": "m_modules",
+    "options": {
+      "label": "Modules"
+    },
+    "roles": {},
+    "itemAccess": true,
+    "schema": {
+      "source": {
+        "type": "string",
+        "required": true
+      },
+      "owner": {
+        "type": "string",
+        "required": true
+      },
+      "name": {
+        "type": "string",
+        "required": true
+      },
+      "version": {
+        "type": "string",
+        "required": true
+      },
+      "dependencies": {
+        "type": "array",
+        "required": true
+      }
+    }
+  },
+  "miids": {
+    "_id": "52923eb6ea5c6526b8870cde",
+    "_tp": [],
+    "db": "mono",
+    "collection": "m_miids",
+    "name": "m_miids",
+    "options": {
+      "label": "Module instances"
+    },
+    "roles": {},
+    "itemAccess": true,
+    "schema": {
+      "miid": {
+        "type": "string",
+        "required": true
+      },
+      "application": {
+        "type": "objectid",
+        "required": true
+      },
+      "module": {
+        "type": "objectid",
+        "required": true
+      },
+      "roles": {
+        "type": "object",
+        "required": true
+      },
+      "config": {
+        "client": {
+          "html": {
+            "type": "string"
+          },
+          "css": {
+            "type": "array"
+          },
+          "scripts": {
+            "type": "array"
+          },
+          "waitFor": {
+            "type": "array"
+          },
+          "loadModules": {
+            "type": "object"
+          },
+          "data": {
+            "type": "object"
+          }
+        },
+        "operations": [
+          {
+            "method": {
+              "type": "string",
+              "required": true
+            },
+            "data": {
+              "type": "object"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "roles": {
+    "_id": "528f7902197ef1c23714a04f",
+    "_tp": [],
+    "db": "mono",
+    "collection": "m_roles",
+    "name": "m_roles",
+    "options": {
+      "label": "Roles"
+    },
+    "roles": {},
+    "schema": {
+      "name": {
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}

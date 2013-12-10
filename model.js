@@ -99,6 +99,9 @@ function getCollectionFromTemplate (templateId, callback) {
     }
 
     var templObject = Templates[templateId];
+    if (!templObject) {
+        return callback ("Template not found.");
+    }
 
     MongoClient.connect("mongodb://localhost:27017/" + templObject.db, function (err, db) {
 

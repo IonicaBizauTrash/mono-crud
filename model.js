@@ -1,6 +1,7 @@
 // Mongo
 var mongodb = require('mongodb')
 var MongoClient = mongodb.MongoClient;
+var Templates = require("./templates");
 
 module.exports = objToReturn = {
     // find

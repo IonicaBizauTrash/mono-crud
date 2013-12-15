@@ -93,15 +93,25 @@ function processOptions (options, fields) {
 var dbCache = {};
 function getCollectionFromTemplate (templateId, callback) {
     
+    if (!templateId) {
+        return callback("Template id not provided.");
+    }
+
     if (dbCache[templateId]) {
         return callback(null, dbCache[templateId]);
     }
 
     var templObject = Templates[templateId];
+    
+    if (templateId.constructor.name === "Object") {
+        templObject = templateId;
+    }
+
     if (!templObject) {
         return callback ("Template not found.");
     }
 
+    // TODO Auth
     MongoClient.connect("mongodb://localhost:27017/" + templObject.db, function (err, db) {
 
         if (err) { return callback (err); }

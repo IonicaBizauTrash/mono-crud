@@ -1,6 +1,6 @@
 {
   "name": "mono-crud",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "NodeJS CRUD module for Mono",
   "main": "operations.js",
   "repository": {
@@ -12,7 +12,7 @@
     "crud"
   ],
   "dependencies": {
-      "mongodb": "*"
+    "mongodb": "*"
   },
   "author": {
     "name": "jillix gmbh"
@@ -23,6 +23,6 @@
   "homepage": "https://github.com/IonicaBizau/mono-crud",
   "readme": "mono-crud\n=========\n\nNodeJS CRUD module for Mono\n",
   "readmeFilename": "README.md",
-  "_id": "mono-crud@0.0.0",
+  "_id": "mono-crud@0.0.6",
   "_from": "mono-crud@*"
 }

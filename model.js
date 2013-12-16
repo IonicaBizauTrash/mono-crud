@@ -101,6 +101,10 @@ function getCollectionFromTemplate (templateId, callback) {
         return callback(null, dbCache[templateId]);
     }
 
+    if (typeof templateId._id === "string") {
+        templateId = templateId._id;
+    }
+
     var templObject = Templates[templateId];
     
     if (templateId.constructor.name === "Object") {
@@ -111,8 +115,12 @@ function getCollectionFromTemplate (templateId, callback) {
         return callback ("Template not found.");
     }
 
-    // TODO Auth
-    MongoClient.connect("mongodb://localhost:27017/" + templObject.db, function (err, db) {
+    if (typeof templObject.connectionStr !== "string" || templObject.connectionStr === "") {
+        return callback ("connectionStrnig must be a non empty string.");
+    }
+
+    console.log(templObject);
+    MongoClient.connect(templObject.connectionStr, function (err, db) {
 
         if (err) { return callback (err); }
         
